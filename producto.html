@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Producto - Máquinas de Coser</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+     <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo.jpg" alt="Logo Maqina de cocer" style="height: 100px;" width="auto;">
+            </a>
+
+        </div>
+
+          <button class="hamburguesa">☰</button>
+          
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="producto.html" class="activo">Producto</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contenido">
+    <h1 class="anim-titulo">Nuestro Producto</h1>
+    <div class="card">
+      <img src="img/maquina1.jpg" alt="Máquina de coser">
+      <h2>Máquina de coser Singer</h2>
+      <p>Alta precisión, durabilidad y facilidad de uso.</p>
+    </div>
+
+    <div class="card">
+      <img src="img/imagen9.jpg" alt="Máquina de coser">
+      <h2>Máquina de coser Singer</h2>
+      <p>Alta precisión, durabilidad y facilidad de uso.</p>
+    </div>
+
+        <div class="card">
+      <img src="img/imagen10.jpg" alt="Máquina de coser">
+      <h2>Máquina de coser Singer</h2>
+      <p>Alta precisión, durabilidad y facilidad de uso.</p>
+    </div>
+
+        <div class="card">
+      <img src="img/imagen11.jpg" alt="Máquina de coser">
+      <h2>Máquina de coser Singer</h2>
+      <p>Alta precisión, durabilidad y facilidad de uso.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Máquinas de Coser</p>
+  </footer>
+
+<script>
+  const btnMenu = document.querySelector(".hamburguesa");
+  const menu = document.querySelector(".menu");
+
+  btnMenu.addEventListener("click", () => {
+    menu.classList.toggle("activo");
+  });
+</script>
+
+
+
+</body>
+</html>

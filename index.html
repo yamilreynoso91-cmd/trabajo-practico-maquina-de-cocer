@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - Máquinas de Coser</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo.jpg" alt="Logo Maqina de cocer" style="height: 100px;" width="auto;">
+            </a>
+
+        </div>
+
+         <button class="hamburguesa">☰</button>
+
+      <ul class="menu">
+        <li><a href="index.html" class="activo">Inicio</a></li>
+        <li><a href="producto.html">Producto</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contenido">
+    <h1 class="anim-titulo">Bienvenido a Máquinas de Coser</h1>
+    <p class="anim-texto">Encuentra las mejores máquinas de coser industriales y domésticas.</p>
+
+    <!-- 🔹 Carrusel -->
+    <div class="carousel">
+      <div class="slides fade">
+        <img src="img/images2.jpg" alt="Máquina 1">
+      </div>
+      <div class="slides fade">
+        <img src="img/images3.jpg" alt="Máquina 2">
+      </div>
+      <div class="slides fade">
+        <img src="img/images4.jpg" alt="Máquina 3">
+      </div>
+      <div class="slides fade">
+        <img src="img/images5.jpg" alt="Máquina 4">
+      </div>
+      <div class="slides fade">
+        <img src="img/images6.jpg" alt="Máquina 5">
+      </div>
+
+      <!-- Botones -->
+      <a class="prev">&#10094;</a>
+      <a class="next">&#10095;</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Máquinas de Coser</p>
+  </footer>
+
+  <!-- JS -->
+  <script>
+         const btnMenu = document.querySelector(".hamburguesa");
+  const menu = document.querySelector(".menu");
+
+  btnMenu.addEventListener("click", () => {
+    menu.classList.toggle("activo");
+  });
+
+    let slideIndex = 0;
+    let slides = document.getElementsByClassName("slides");
+    let prev = document.querySelector(".prev");
+    let next = document.querySelector(".next");
+
+    function showSlides(n) {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 4000); // cambia cada 4 segundos
+    }
+
+    showSlides();
+
+    // Botones manuales
+    prev.addEventListener("click", () => {
+      slideIndex = (slideIndex - 2 + slides.length) % slides.length;
+      for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
+      slides[slideIndex].style.display = "block";
+    });
+
+    next.addEventListener("click", () => {
+      slideIndex = slideIndex % slides.length;
+      for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
+      slides[slideIndex].style.display = "block";
+    });
+  </script>
+</body>
+</html>

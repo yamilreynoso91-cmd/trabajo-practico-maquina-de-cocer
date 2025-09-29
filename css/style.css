@@ -1,0 +1,243 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #001f3f, #00c6ff);
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px 0;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.menu li a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.menu li a:hover {
+  background: #00c6ff;
+  color: #001f3f;
+  transform: scale(1.1);
+}
+.menu li a.activo {
+  background: #00c6ff;
+  color: #001f3f;
+}
+
+.contenido {
+  flex: 1;
+  text-align: center;
+  padding: 40px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+  gap: 10px;
+}
+.formulario input, .formulario textarea, .formulario button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+}
+.formulario button {
+  background: #00c6ff;
+  color: #001f3f;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.formulario button:hover {
+  background: rgb(51, 209.4, 255);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.anim-titulo {
+  animation: fadeIn 1s ease forwards;
+}
+
+.anim-texto {
+  animation: fadeIn 2s ease forwards;
+}
+
+.logo a {
+  font-size: 1.5em;
+  font-weight: 100px;
+  color: #00c6ff;
+  text-decoration: none;
+}
+
+.carousel {
+  position: relative;
+  max-width: 600px;
+  height: 200px;
+  margin: 40px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+.carousel .slides {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+.carousel .slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 15px;
+}
+.carousel .prev, .carousel .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 12px;
+  color: white;
+  font-weight: bold;
+  font-size: 28px;
+  transition: 0.3s;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.carousel .prev:hover, .carousel .next:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+.carousel .prev {
+  left: 15px;
+}
+.carousel .next {
+  right: 15px;
+}
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+.menu li a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.menu li a:hover {
+  background: #00c6ff;
+  color: #001f3f;
+  transform: scale(1.1);
+}
+.menu li a.activo {
+  background: #00c6ff;
+  color: #001f3f;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 0.9em;
+  color: #ffffff;
+}
+
+.hamburguesa {
+  display: none;
+  font-size: 28px;
+  color: #ffffff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  .menu li {
+    margin: 10px 0;
+  }
+  .menu.activo {
+    display: flex;
+  }
+  .hamburguesa {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
