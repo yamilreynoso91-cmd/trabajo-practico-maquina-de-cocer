@@ -83,6 +83,46 @@ header {
   background: rgb(51, 209.4, 255);
 }
 
+.card2 {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+.card2 img {
+  width: 100%;
+  border-radius: 10px;
+}
+.card2:hover {
+  transform: translateY(-10px);
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+  gap: 10px;
+}
+.formulario input, .formulario textarea, .formulario button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+}
+.formulario button {
+  background: #00c6ff;
+  color: #001f3f;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.formulario button:hover {
+  background: rgb(51, 209.4, 255);
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
