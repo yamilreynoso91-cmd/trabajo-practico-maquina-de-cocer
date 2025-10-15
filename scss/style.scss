@@ -172,7 +172,7 @@ a {
 // ============================
 .contenido {
   padding: 40px;
-  text-align: center;
+  text-align: left;
 
   .anim-titulo {
     font-size: 2.2rem;
@@ -186,6 +186,8 @@ a {
     animation: fadeIn 2s ease-in;
   }
 }
+
+
 
 // ============================
 // CARRUSEL
